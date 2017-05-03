@@ -379,7 +379,7 @@ p{
 
 /* projects section styling */
 .projects{
-	margin-top:50px;
+	margin-top:30px;
 	position: relative;
 }
 .projects .buttons{
@@ -390,7 +390,7 @@ p{
 	padding:7px 15px;
 	background-color:transparent;
 	border:1px solid #23b4ff;
-	margin:0 5px;
+	margin:10px 5px;
 	color:#505050;
 	outline:0;
 	font-family:Montserrat;
