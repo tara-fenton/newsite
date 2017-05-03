@@ -18,6 +18,13 @@
       <link rel="stylesheet" href="css/magnific-popup.css">
       <!-- custom style css file -->
       <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="js/refreshform.js"></script>
+      <script
+      src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
    </head>
    <body>
       <!-- loading -->
@@ -501,14 +508,15 @@
             <div class="hr"></div>
             <h2 class="section-header">contact me</h2>
             <div class="col-md-6 left">
-               <form action="mailfrom.php" method="POST" enctype="multipart/form-data">
-                  <input name="name" type="text" placeholder="Your Name" required>
-                  <input name="email" type="email" placeholder="Your Email" required>
-                  <input name="phone" type="text" placeholder="Your Phone Number" required>
-                  <textarea name="message" placeholder="Your Message" required></textarea>
-                  <input class="submit" type="submit" name="submit" value="send message">
+               <form id="form" name="form">
+                  <input id="nameMsg" type="text" placeholder="Your Name" required>
+                  <input id="email" type="email" placeholder="Your Email" required>
+                  <input id="phone" type="text" placeholder="Your Phone Number" required>
+                  <textarea id="message" placeholder="Your Message" required></textarea>
+                  <input id="submit" type="button" value="send message">
                </form>
             </div>
+           
             <div class="col-md-6">
                <div class="row">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
