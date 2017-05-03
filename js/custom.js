@@ -180,13 +180,13 @@ $(document).ready(function () {
 					width: '70%'
 				}, 2000);
 				$(".ps").animate({
-					width: '90%'
+					width: '70%'
 				}, 2000);
-				$(".il").animate({
-					width: '60%'
+				$(".gt").animate({
+					width: '70%'
 				}, 2000);
-				$(".bs").animate({
-					width: '50%'
+				$(".as").animate({
+					width: '100%'
 				}, 2000);
 				flag = false;
 			}
