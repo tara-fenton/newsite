@@ -1,102 +1,618 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html">
-  <title>Single Page Sliding Layout - Design Shack Demo</title>
-  <meta name="author" content="Jake Rocheleau">
-  <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
-  <link rel="icon" href="http://designshack.net/favicon.ico">
-  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-</head>
-
-<body>
-  <div id="topbar">
-  <a href="http://designshack.net">Back to Design Shack</a>
-  </div>
-  
-  <div id="w">
-    <div id="content">
-      <nav id="stickynav">
-        <ul id="nav" class="clearfix">
-          <li><a href="#topbar">Homepage</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#photos">Photos</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <h1>Single-Page Sliding Effect</h1>
-      
-      <p>Click on the navigation items for a basic sliding effect.</p>
-      
-      <p>Extra page content is courtesy of <a href="http://bluthipsum.com/">Bluth Ipsum</a>. </p>
-      
-      <p>But I didn't take wasn't optimistic it could be done for an answer. You burn down the storage unit? Oh, most definitely. You're a good guy, mon frere. That means brother in French. I don't know how I know that. I took four years of Spanish.</p>
-      
-      <p>What is she doing at a beauty pageant? Is she running the lights or something?</p>
-      
-      <br><br>
-      
-      <section id="about" class="section">
-      <h2>About Us</h2>
-      
-      <p>I'll be in the hospital bar. You know there isn't a hospital bar, Mother. Well, this is why people hate hospitals. Friday night. It just seems like there's still light coming in from under the door. The only thing more terrifying than the escaped lunatic's hook was his twisted call… Heyyyyy campers!</p>
-      
-      <p>I'm gonna build me an airport, put my name on it. Why, Michael? So you can fly away from your feelings?</p>
-      
-      <p>In the mid '90s, Tobias formed a folk music band with Lindsay and Maebe which he called Dr. Funke's 100 Percent Natural Good Time Family Band Solution. The group was underwritten by the Natural Food Life Company, a division of Chem-Grow, an Allen Crayne acqusition, which was part of the Squimm Group. Their motto was simple: We keep you alive.</p>
-      
-      <p>Please refrain from Mayoneggs during this salmonella scare. A Colombian cartel that WON'T kidnap and kill you. I believe you will find the dessert to be both engrossing and high-grossing! So we don't get dessert?</p>
-      
-      <p>OH MY GOD, WE'RE HAVING A FIRE… sale. Oh, the burning! ♪♪ Amaaaaaaziiiing Graaaace ♪♪</p>     
-      </section>
-      
-      
-      
-      <section id="photos" class="section">
-      <h2>Some Photos</h2>
-      
-      
-      <p>Source: <a href="http://www.flickr.com/photos/bunnicula/8769762365/">http://www.flickr.com/photos/bunnicula/8769762365/</a></p>
-      <img src="img/bluth-frozen-banana.jpg" alt="Bluths Frozen Bananas">
-      
-      <br><br>
-      
-      <p>Source: <a href="http://www.flickr.com/photos/bunnicula/8774851072/">http://www.flickr.com/photos/bunnicula/8774851072/</a></p>
-      <img src="img/cash-only.jpg" alt="Cash Only">
-      <br><br>
-      
-      <p>Source: <a href="http://www.flickr.com/photos/aphrodite-in-nyc/6205273331/">http://www.flickr.com/photos/aphrodite-in-nyc/6205273331/</a></p>
-      <img src="img/arrested-cast-chicken-dance.jpg" alt="Arrested Development cast chicken dance">
-      </section>
-      
-      <section id="contact" class="section">
-      <h2>Contact Details</h2>
-      
-      <p>Not much else to say here. Why not get in touch!</p>
-      
-      <form method="post" action="#">
-        <input type="text" class="basic" placeholder="Name...">
-        
-        <input type="text" class="basic" placeholder="E-mail...">
-        
-        <textarea class="basictxt"></textarea>
-      </form>
-      <br><br><br>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- meta tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Proff</title>
+      <!-- font-awesome css file -->
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <!-- bootstrap css file -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <!-- Important Owl stylesheet -->
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <!-- Default Theme -->
+      <link rel="stylesheet" href="css/owl.theme.css">
+      <!-- magnific popup css file -->
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <!-- custom style css file -->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!-- loading -->
+      <div class="loading">
+         <div class="back"></div>
+         <div class="load"></div>
       </div>
-           <br><br><br><br><br><br> 
-    </div><!-- @end #content -->
-  </div><!-- @end #w -->
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-</body>
+      <!-- nav-bar -->
+      <nav class="home-nav">
+         <div class="container">
+            <a href="index.html"><img class="logo" src="http://placehold.it/338x108" alt="logo"></a>
+            <i id="minimize" class="fa fa-bars" aria-hidden="true"></i>
+            <ul id="list">
+               <li class="active"><a><span>[</span>Home<span>]</span></a></li>
+               <li><a><span>[</span>About<span>]</span></a></li>
+               <li><a><span>[</span>Projects<span>]</span></a></li>
+               <li><a><span>[</span>skills<span>]</span></a></li>
+               <li><a><span>[</span>Pricing<span>]</span></a></li>
+               <li><a><span>[</span>Contact<span>]</span></a></li>
+            </ul>
+         </div>
+      </nav>
+      <!-- header section -->
+      <section class="header">
+         <div class="sayHi">
+            <h1 class="hi"><span id="hi">|</span><span id="name"></span></h1>
+            <h2 class="job" id="job">|</h2>
+            <div class="contact-button">
+               <button class="GIT">GET IN TOUCH</button>
+            </div>
+         </div>
+         <div class="down">
+            <i class="fa fa-chevron-down down-icon" aria-hidden="true"></i>
+         </div>
+      </section>
+      <!-- about section -->
+      <section class="about secSpace">
+         <div class="container">
+            <div class="hr"></div>
+            <h2 class="section-header">About me</h2>
+            <div class="me">
+               <img src="http://placehold.it/500x500" alt="remon fawzi">
+            </div>
+            <div class="about-text">
+               <h3>JHON SMITH</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <div class="social-accounts">
+                  <a href="" id="fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="" id="tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href=""  id="gplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href=""  id="li"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- statistics section -->
+      <section class="statistics secSpace">
+         <div class="container">
+            <div class="stat col-md-3">
+               <i class="fa fa-code" aria-hidden="true"></i>
+               <p class="num" id="num-lines">0</p>
+               <p class="title">lines of code</p>
+            </div>
+            <div class="stat col-md-3">
+               <i class="fa fa-tasks" aria-hidden="true"></i>
+               <p class="num" id="num-projects">0</p>
+               <p class="title">projects done</p>
+            </div>
+            <div class="stat col-md-3">
+               <i class="fa fa-coffee" aria-hidden="true"></i>
+               <p class="num" id="num-cups">0</p>
+               <p class="title">cups of coffee</p>
+            </div>
+            <div class="stat col-md-3">
+               <i class="fa fa-smile-o" aria-hidden="true"></i>
+               <p class="num" id="num-customers">0</p>
+               <p class="title">satisfied customers</p>
+            </div>
+         </div>
+      </section>
+      <!-- projects section -->
+      <section class="projects secSpace">
+         <div class="container">
+            <div class="hr"></div>
+            <h2 class="section-header">My projects</h2>
+            <div class="buttons" data-toggle="buttons">
+               <button class="filter" data-filter="all">ALL</button>
+               <button class="filter" data-filter=".web">WEB</button    >
+               <button class="filter" data-filter=".graphic">GRAPHIC</button>
+            </div>
+            <div id="Container">
+                <!-- project 1 -->
+               <div class="mix web project">
+                  <img src="http://placehold.it/600x400" alt="project1">
+                   <a href="#popup1" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 1 -->
+                    
+               <div id="popup1" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>web design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 2 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project2">
+                  <a href="#popup2" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 1 -->
+                    
+               <div id="popup2" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 3 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project3">
+                  <a href="#popup3" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 3 -->
+                <div id="popup3" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 4 -->
+               <div class="mix web project">
+                  <img src="http://placehold.it/600x400" alt="project4">
+                  <a href="#popup4" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 4 -->
+                <div id="popup4" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>web design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 5 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project5">
+                  <a href="#popup5" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 5 -->
+                <div id="popup5" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 6 -->
+               <div class="mix web project">
+                  <img src="http://placehold.it/600x400" alt="project6">
+                  <a href="#popup6" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 6 -->
+                <div id="popup6" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>web design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                <!-- project 7 -->
+               <div class="mix web project">
+                  <img src="http://placehold.it/600x400" alt="project7">
+                  <a href="#popup7" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 7 -->
+                <div id="popup7" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>web design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 8 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project8">
+                  <a href="#popup8" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 8 -->
+                <div id="popup8" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 9 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project9">
+                  <a href="#popup9" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                <!-- popup 9 -->
+                <div id="popup9" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 10 -->
+               <div class="mix web project">
+                  <img src="http://placehold.it/600x400" alt="project10">
+                  <a href="#popup10" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                <!-- popup 10 -->
+                <div id="popup10" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>web design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 11 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project11">
+                  <a href="#popup11" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 11 -->
+                <div id="popup11" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+                
+                <!-- project 12 -->
+               <div class="mix graphic project">
+                  <img src="http://placehold.it/600x400" alt="project12">
+                  <a href="#popup12" class="popup-link">
+                        <div class="overlay">
+                             <div class="cen">
+                                <div>
+                                    <h3>project name</h3>
+                                    <p>short description about the project</p>  
+                                </div>
+                             </div>
+                        </div>
+                   </a>
+               </div>
+                
+                <!-- popup 12 -->
+                <div id="popup12" class="white-popup mfp-hide">
+                    <h3>project title</h3>
+                    <h5>graphic design</h5>
+                    <img src="http://placehold.it/600x400" alt="p1">
+                    <p class="desc">You may put any HTML here. This is dummy copy. It is not meant to       be read. 
+                            Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces. Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box"
+                    </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- skills section -->
+      <section class="skills secSpace">
+         <div class="container">
+            <h2 class="section-header">My skills</h2>
+            <div class="skill col-md-6">
+               <p>HTML &amp; CSS</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar hc"></div>
+               </div>
+            </div>
+            <div class="skill col-md-6">
+               <p>JavaScript</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar j"></div>
+               </div>
+            </div>
+            <div class="skill col-md-6">
+               <p>Jquery</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar jq"></div>
+               </div>
+            </div>
+            <div class="skill col-md-6">
+               <p>Photoshop</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar ps"></div>
+               </div>
+            </div>
+            <div class="skill col-md-6">
+               <p>Illustrator</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar il"></div>
+               </div>
+            </div>
+            <div class="skill col-md-6">
+               <p>Bootstrap</p>
+               <div>
+                  <div class="back"></div>
+                  <div class="p-bar bs"></div>
+               </div>
+            </div>
+            <div class="fix"></div>
+         </div>
+      </section>
+      <!-- pricing section -->
+      <section class="pricing secSpace">
+         <div class="container">
+            <div class="hr"></div>
+            <h2 class="section-header">pricing</h2>
+            <div class="col-md-4">
+               <div class="plane left">
+                  <h3>Basic</h3>
+                  <p class="price"><span>$</span> 25</p>
+                  <p class="per">per month</p>
+                  <p class="property yes">Faster Approvals</p>
+                  <p class="property yes">Mail Support</p>
+                  <p class="property no">Instant Services</p>
+                  <p class="property no">Credit Options</p>
+                  <p class="property no">Admin Access</p>
+                  <p class="property no">24/7 Support</p>
+                  <div><button>sign up now</button></div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="plane">
+                  <h3>pro</h3>
+                  <p class="price"><span>$</span> 50</p>
+                  <p class="per">per month</p>
+                  <p class="property yes">Faster Approvals</p>
+                  <p class="property yes">Mail Support</p>
+                  <p class="property yes">Instant Services</p>
+                  <p class="property yes">Credit Options</p>
+                  <p class="property yes">Admin Access</p>
+                  <p class="property yes">24/7 Support</p>
+                  <div><button>sign up now</button></div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="plane right">
+                  <h3>premium</h3>
+                  <p class="price"><span>$</span> 40</p>
+                  <p class="per">per month</p>
+                  <p class="property yes">Faster Approvals</p>
+                  <p class="property yes">Mail Support</p>
+                  <p class="property yes">Instant Services</p>
+                  <p class="property yes">Credit Options</p>
+                  <p class="property no">Admin Access</p>
+                  <p class="property no">24/7 Support</p>
+                  <div><button>sign up now</button></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- clients comments -->
+      <section class="comments secSpace" >
+         <div class="container">
+            <div class="hr"></div>
+            <h2 class="section-header">what clients said</h2>
+            <div class="owl-carousel owl-theme" id="owl-demo">
+               <div class="comment">
+                  <img src="http://placehold.it/300x300" alt="jhon">
+                  <p class="name">paulo suarez</p>
+                  <p class="c">he is perfect in his field and do his best to give a good work, i really appreciate him.</p>
+               </div>
+               <div class="comment">
+                  <img src="http://placehold.it/300x300" alt="jhon">
+                  <p class="name">michael raf</p>
+                  <p class="c">he is perfect in his field and do his best to give a good work, i really appreciate him.</p>
+               </div>
+               <div class="comment">
+                  <img src="http://placehold.it/300x300" alt="jhon">
+                  <p class="name">mary kaen</p>
+                  <p class="c">he is perfect in his field and do his best to give a good work, i really appreciate him.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- partners section -->
+      <section class="partners secSpace">
+         <div class="container">
+            <div class="pa col-md-3">
+               <img alt="graphic river" src="http://placehold.it/250x63">
+            </div>
+            <div class="pa col-md-3">
+               <img alt="code canyon" src="http://placehold.it/250x63">
+            </div>
+            <div class="pa col-md-3">
+               <img alt="theme forest" src="http://placehold.it/250x63">
+            </div>
+            <div class="pa col-md-3">
+               <img alt="photo dune" src="http://placehold.it/250x63">
+            </div>
+         </div>
+      </section>
+      <!-- contact section -->
+      <section class="contact secSpace">
+         <div class="container">
+            <div class="hr"></div>
+            <h2 class="section-header">contact me</h2>
+            <div class="col-md-6 left">
+               <form>
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  <input type="text" placeholder="Your Phone Number" required>
+                  <textarea placeholder="Your Message" required></textarea>
+                  <input class="submit" type="submit" value="send message">
+               </form>
+            </div>
+            <div class="col-md-6">
+               <div class="row">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <p>29 m.qodus street, shoubra, egypt</p>
+               </div>
+               <div class="row">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>	
+                  <p>remonfawzi0@gmail.com</p>
+               </div>
+               <div class="row">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>	
+                  <p>01206693375</p>
+               </div>
+               <div class="social-accounts">
+                  <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- google map -->
+      <div id="map"></div>
+      <!-- footer -->
+      <section class="footer">
+         <div class="container">
+            <p>&copy; copyrights | proff 2016 </p>
+         </div>
+      </section>
+       
+       
+      <!-- google map scripts -->
+      <!-- map function script file -->
+      <script src="js/map.js"></script>
+      <!-- Replace the value of the key parameter with your own API key. -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtF3fzhHz_-dI4YBTJNUfBh4RueZU5ILs&callback=initMap" async defer></script>
+      <!-- jquery script file -->
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- mixItUp script file -->
+      <script src="js/jquery.mixitup.js"></script>
+      <!-- bootstrap script file -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- owl carousel script file -->
+      <script src="js/owl.carousel.js"></script>
+       <!-- magnific popup script file -->
+       <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- custom script file -->
+      <script src="js/custom.js"></script>
+   </body>
 </html>
