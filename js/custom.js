@@ -8,8 +8,8 @@ $(window).on("load", function () {
 		name = document.getElementById("name"),
 		job = document.getElementById("job"),
 		hiText = "Hi, ",
-		nameText = "I'm Jhon smith",
-		jobText = "Web & Graphic Designer",
+		nameText = "I'm Tara Fenton",
+		jobText = "Interactive Developer",
 		text = "",
 		text2 = "",
 		text3 = "",
@@ -108,13 +108,9 @@ $(document).ready(function () {
 		}, 800);
 	});
 	
-	$(".home-nav ul li:nth-of-type(5)").on("click", function () {
-		$("body, html").animate({
-			scrollTop: $(".pricing").offset().top - 70
-		}, 800);
-	});
 	
-	$(".home-nav ul li:nth-of-type(6)").on("click", function () {
+	
+	$(".home-nav ul li:nth-of-type(5)").on("click", function () {
 		$("body, html").animate({
 			scrollTop: $(".contact").offset().top - 70
 		}, 800);
@@ -178,19 +174,19 @@ $(document).ready(function () {
 					width: '90%'
 				}, 2000);
 				$(".j").animate({
-					width: '70%'
+					width: '80%'
 				}, 2000);
 				$(".jq").animate({
-					width: '80%'
+					width: '70%'
 				}, 2000);
 				$(".ps").animate({
 					width: '90%'
 				}, 2000);
 				$(".il").animate({
-					width: '50%'
+					width: '60%'
 				}, 2000);
 				$(".bs").animate({
-					width: '85%'
+					width: '50%'
 				}, 2000);
 				flag = false;
 			}
@@ -214,13 +210,8 @@ $(document).ready(function () {
 			$(".home-nav ul li:nth-of-type(4)").addClass("active").siblings().removeClass("active");
 		}
 		
-		
-		if ($(window).scrollTop() >= $(".pricing").offset().top - 70) {
-			$(".home-nav ul li:nth-of-type(5)").addClass("active").siblings().removeClass("active");
-		}
-		
 		if ($(window).scrollTop() >= $(".contact").offset().top - 70) {
-			$(".home-nav ul li:nth-of-type(6)").addClass("active").siblings().removeClass("active");
+			$(".home-nav ul li:nth-of-type(5)").addClass("active").siblings().removeClass("active");
 		}
 		
 		

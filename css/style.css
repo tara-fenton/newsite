@@ -1,4 +1,7 @@
 /* fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 @font-face{
 	font-family:Montserrat;
 	src:url("../fonts/Montserrat-Regular.ttf");
@@ -160,7 +163,7 @@ p{
 /* header styling */
 
 .header{
-	background-image:url("http://placehold.it/1300x870");
+	background-image:url("../img/starIndex.jpg");
 	background-size:cover;
 	position: relative;
 }
@@ -168,7 +171,7 @@ p{
 	text-align: center;
 	width:100%;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -190,8 +193,9 @@ p{
 	text-transform: capitalize;
 }
 .header .job{
-	color:#eee;
-	font-family:Raleway;
+	color:#000;
+	font-size:50px;
+	font-family:Lobster;
 	text-align: center;
 	letter-spacing: 2px;
 }
@@ -200,13 +204,13 @@ p{
 }
 .header .contact-button button{
 	color:#fff;
-	background-color:transparent;
+	background-color:#000;
 	border:4px solid #23b4ff;
 	padding:8px 20px;
 	font-family:Raleway;
 	font-size:20px;
 	outline:0;
-	opacity:0;
+	opacity:1;
 	transition:all .5s ease-in-out;
 	-webkit-transition:all .5s ease-in-out;
 	-moz-transition:all .5s ease-in-out;
@@ -333,7 +337,7 @@ p{
 /* statistics section stylings */
 
 .statistics{
-    background-image:url("http://placehold.it/2000x854");
+    background-image:url("../img/grassStar.jpg");
     background-size:cover;
     background-attachment: fixed;
 }
@@ -533,7 +537,7 @@ p{
 /* skills section styling */
 
 .skills{
-	background-image:url("http://placehold.it/1400x500");
+	background-image:url("../img/nightSkySkills.jpg");
 	background-size:cover;
 	background-attachment: fixed;
 	position: relative;
@@ -548,9 +552,9 @@ p{
 }
 .skills .skill p{
 	color:#eee;
-	font-family:Montserrat;
-	font-size:15px;
-	letter-spacing: .5px;
+	font-family:Anton;
+	font-size:18px;
+	letter-spacing: 1.2px;
 	text-transform: uppercase;
 }
 .skills .skill div{
@@ -558,7 +562,7 @@ p{
 }
 .skills .skill .back{
 	position:absolute;
-	background-color:rgba(255, 255, 255, 0.6);
+	background-color:rgba(125, 104, 104, 0.6);
 	width:100%;
 	height:10px;
 	border-radius:5px;
@@ -572,100 +576,9 @@ p{
 }
 
 
-/* pricing section styling */
-.pricing{
-	position: relative;
-}
-.pricing .col-md-4{
-	padding:0 30px;
-}
-.pricing .plane{
-	background-color:#2b2b2b;
-	padding:20px;
-}
-.pricing .plane h3{
-	color:#fff;
-	font-family:Montserrat;
-	text-align: center;
-	border-top:2px solid #717171;
-	border-bottom:2px solid #717171;
-	padding:10px 0;
-	text-transform: uppercase;
-	transition:all .5s ease-in-out;
-}
-.pricing .plane:hover h3{
-	border-top:2px solid #23aaf0;
-	border-bottom:2px solid #23aaf0;
-}
-.pricing .plane .price{
-	text-align: center;
-	color:#fff;
-	font-family:Montserrat;
-	font-size:40px;
-}
-.pricing .plane .price span{
-	font-size:20px;
-    vertical-align: text-top;
-}
-.pricing .plane .per{
-	text-align: center;
-	color:#23aaf0;
-	font-family:Raleway;
-	font-size:20px;
-	text-transform: uppercase;
-	padding-bottom:15px;
-	border-bottom:1px solid #ccc;
-}
-.pricing .plane .property{
-	font-family:Raleway;
-	font-size:18px;
-	text-transform: capitalize;
-	text-align: center;
-	padding:3px 0;
-}
-.pricing .plane .yes{
-	color:#fff;
-    font-weight:1000;
-}
-.pricing .plane .no{
-	color:rgba(255, 255, 255, 0.57);
-}
-.pricing .plane div{
-	text-align: center;
-	padding:20px 0;
-}
-.pricing .plane div button{
-	padding:10px 40px;
-	font-family:Raleway;
-	text-transform: capitalize;
-	background-color:#23b4ff;
-	color:#fff;
-	border:0;
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-o-border-radius:5px;
-	outline:0;
-	font-size:20px;
-	transition:all .5s ease-in-out;
-	-webkit-transition:all .5s ease-in-out;
-	-moz-transition:all .5s ease-in-out;
-	-o-transition:all .5s ease-in-out;
-}
-.pricing .plane div button:hover{
-	background-color:#fff;
-	color:#525252;
-}
-.pricing .left{
-	border-top-left-radius:60px;
-}
-.pricing .right{
-	border-top-right-radius:60px;
-}
-
 /* clients comments */
 .comments{
-    background-image:url("http://placehold.it/1400x500");
+    background-image:url("../img/starfishSkills/jpg");
     background-size:cover;
     background-attachment: fixed;
 	background-color:#23b4ff;
